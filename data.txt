@@ -1,0 +1,82 @@
+SQL->we need to learn a language i.e. structure query language
+  Database server
+     Database 
+        tables
+           rows
+             colums
+    I/O --> Bit Slow
+    Schema Structure
+    User 
+        Name Email address
+        Name Email Address
+NoSQL--> no need to learn language but need to learn method
+    Database server 
+      Database
+        Collection
+          Documents
+           Fields
+    I/O--> Input Output--> Fast
+    No Schema
+    User
+       name email address
+       name
+       email address
+       address
+
+// Mongo DB NoSQL Database
+Download:-https://www.mongodb.com/try/download/community
+Download Community server
+and Install in out system
+
+Database server(library)
+  Database(shell/rack)
+    Collection(books)
+      Document(pages)
+        Fields (words/sentence)
+
+Datbase-->
+    getlist--> show dbs
+    create DB--> use dbName (NSSDB1)
+    delete DB
+    switch DB
+
+Collection 
+    getlist-->show collections
+    creare Collection->db.createCollection('collectionName')
+    delete collecction-->db.collectionName.drop()
+
+Document (data)-->CRUD operation
+    Read 
+        db.collectionName.find()
+        db.collectionName.find(filter)
+        db.collectionName.find({},projection)
+        db.collectionName.find(filter,projection)
+         
+    Create/Insert/Write
+        db.collectionName.insertOne({...})
+        db.collectionName.insertMany([{...},{...},{...}])
+    Update
+    delete
+
+Mongodb stores data in BSON format i.e Binary JSOn (JavaSctipt Obejct Notation)
+JSON--> limited datatype 
+
+insertedId: ObjectId('6560b0d11b989b3e8840002a')
+
+primary Key -->
+   key we cant modify
+   primary key is not duplicate
+   primary key is not null
+
+  6560b0d1 1b989b3e88 40002a is primary key
+  _id store
+  12 bytes i.e. 24 chars
+  12 Bytes--> 4 Bytes time stamp hex format
+  +
+  5 Bytes random value generated per User
+  random value is unique to the machine and process
+  +
+  3 bytes ->
+  Unix epach
+  3bytes
+  01-01-1970
